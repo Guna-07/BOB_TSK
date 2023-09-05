@@ -1,0 +1,19 @@
+mongoose
+  .connect(`mongodb+srv://guna:${process.env.MONGODB_PASSWORD}@cluster0.j7uvt6s.mongodb.net/?retryWrites=true&w=majority`
+)
+ .then(()=>
+    app.listen(5000,()=>
+       console.log("Connect to Database and server is running")
+       )
+    )
+    .catch((e)=> console.log(e));
+
+//connect to the server using the above statements
+
+app.use("/",(req,res,next)=>{
+    res.send("hi guns np");
+});
+
+//used to create sample routes
+
+//now i am going create the api and i am going to use mvc approch
